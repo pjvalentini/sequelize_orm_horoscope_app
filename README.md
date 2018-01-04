@@ -1,0 +1,1 @@
+# sequelize_orm_horoscope_app
