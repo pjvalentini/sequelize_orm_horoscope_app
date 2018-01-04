@@ -7,7 +7,7 @@ module.exports = {
 		}).then(function(res) {
 			users(res);
 		});
-	}
+	},
 };
 
 createUser: (name, birthdate, newUser) => {
