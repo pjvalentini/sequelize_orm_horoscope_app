@@ -11,10 +11,11 @@ module.exports = {
 	},
 };
 
-createUser: (name, birthdate, newUser) => {
+createUser: (name, birthdate, zodiac, newUser) => {
 	models.User.create({
 		name: name,
 		birthdate: birthdate,
+		zodiac: zodiac,
 	}).then((res) => {
 		newUser(res);
 	});

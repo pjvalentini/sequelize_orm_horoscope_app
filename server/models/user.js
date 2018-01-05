@@ -9,6 +9,9 @@ module.exports = function(sequelize, DataTypes) {
 		birthdate: {
 			type: DataTypes.DATE,
 		},
+		zodiac: {
+			type: DataTypes.STRING,
+		}
 	}, {
 		classMethods: {
 					associate: function(models) {
