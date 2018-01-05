@@ -9,3 +9,6 @@ router.get('get-users', function(req, res) {
 		res.json(users);
 	});
 });
+
+
+module.exports = router;
