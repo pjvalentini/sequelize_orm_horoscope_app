@@ -10,6 +10,12 @@ module.exports = {
 		});
 	},
 
+	// getOneUser: (id) => { // ask about this
+	// 	models.User.findAll({ where: { id: id } }).then((res) => {
+	// 		id(res);
+	// 	});
+	// },
+
 	createUser: (name, birthdate, zodiac, newUser) => {
 		models.User.create({
 			name: name,

@@ -4,27 +4,32 @@ var router = express.Router();
 var mc = require('./model-controller.js');
 var models = require('./../models');
 
+// route to homepage - working
 router.get('/', function(req,res) {
 	res.sendFile(path.join(__dirname, '../../client/public/html/home.html'));
 });
 
-router.get('/sign-up', function(req, res) {
-	res.sendfile(path.join(__dirname, '../../client/public/html/sign-up.html'));
-});
+// route to sign-up page - working
+// router.get('/sign-up', function(req, res) {
+// 	res.sendfile(path.join(__dirname, '../../client/public/html/sign-up.html'));
+// });
 
-router.get('/sign-in', function(req, res) {
-	res.sendfile(path.join(__dirname, '../../client/public/html/sign-in.html'));
-});
+// route to sign-in page - working
+// router.get('/sign-in', function(req, res) {
+// 	res.sendfile(path.join(__dirname, '../../client/public/html/sign-in.html'));
+// });
 
-
+// this route lets you see all the users in the DB..- working
 router.get('/get-users', function(req, res) {
 	mc.getAllUsers((users) => {
-		console.log(users);
+		// console.log(users);
 		res.json(users);
 	});
 });
 
+// route to create users - works with postman
 router.post('/create-user', (req, res) => {
+	console.log(req.body);
 	mc.createUser(
 		req.body.name,
 		req.body.birthdate,
@@ -32,16 +37,36 @@ router.post('/create-user', (req, res) => {
 		(user) => {
 			// console.log(user);
 			res.json(user);
-		}
-	);
+		});
 });
 
-router.get('/api/create-user', function(req,res) {
-	if (req.body.name && req.body.bithdate) {
-		res.json({ message: 'signed-in', id: req.body.id });
-	}
-});
+// OLD CODE _ NOT USING this now...
+// router.get('/api/sign-up', function(req,res) { // ask about this - BAD BAD!
+// 	if (req.id) {
+// 		mc.getOneUser(
+// 			req.params.id,
+// 			(usersByName) => {
+// 				console.log(usersByName);
+// 				res.json(usersByName);
+// 			}
+// 		);
+// 		res.json({ message: 'signed-in', id: req.body.id });
+// 	}
+// });
 
+// router.post('/api/sign-up', function(req, res) {
+// 	mc.createUser(
+// 		req.body.name,
+// 		req.body.birthdate,
+// 		req.body.zodiac,
+// 		(user) => {
+// 			console.log(user);
+// 			res.json(user);
+// 		}
+// 	);
+// });
+
+// route to get all zodiacs from DB - works
 router.get('/zodiac', function(req, res) {
 	mc.getAllZodiacs((signs) => {
 		// console.log(signs);
@@ -49,16 +74,18 @@ router.get('/zodiac', function(req, res) {
 	});
 });
 
+// route to get zodaic by zodiac name - works
 router.get('/zodiac/:zodiac', function(req, res) {
 	mc.getOneZodiac(
 		req.params.zodiac,
 		(signsById) => {
-			console.log(signsById);
+			// console.log(signsById);
 			res.json(signsById);
 		}
 	);
 });
 
+// route for creating a zodaic -- works through postman
 router.post('/create-zodiac', (req, res) => {
 	mc.createZodiac(
 		req.body.zodiac,
@@ -71,7 +98,5 @@ router.post('/create-zodiac', (req, res) => {
 		}
 	);
 });
-
-
 
 module.exports = router;
