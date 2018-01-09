@@ -12,7 +12,7 @@ module.exports = function(sequelize, DataTypes) {
 				type: DataTypes.STRING,
 			},
 			date_range: {
-				type: DataTypes.DATE,
+				type: DataTypes.STRING,
 			},
 	}, {
 		classMethods: {
