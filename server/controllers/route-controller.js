@@ -56,7 +56,7 @@ router.get('/zodiac/:zodiac', function(req, res) {
 			console.log(signsById);
 			res.json(signsById);
 		}
-	);	
+	);
 });
 
 router.post('/create-zodiac', (req, res) => {
