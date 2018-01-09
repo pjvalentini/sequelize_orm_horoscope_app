@@ -1,9 +1,12 @@
 var express = require('express');
-
+var path = require('path');
 var router = express.Router();
 var mc = require('./model-controller.js');
-
 var models = require('./../models');
+
+router.get('/', function(req,res) {
+	res.sendFile(path.join(__dirname, '../../client/public/html/home.html'));
+});
 
 router.get('/get-users', function(req, res) {
 	mc.getAllUsers((users) => {
