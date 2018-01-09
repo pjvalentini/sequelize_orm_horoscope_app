@@ -26,8 +26,8 @@ module.exports = {
 		});
 	},
 
-	getOneZodiac: (id , signs) => {
-		models.Horoscope.findAll({ where: { id: id } }).then((res) => {
+	getOneZodiac: (zodiac , signs) => {
+		models.Horoscope.findAll({ where: { zodiac: zodiac } }).then((res) => {
 			signs(res);
 		});
 	},

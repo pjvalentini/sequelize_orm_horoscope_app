@@ -36,6 +36,12 @@ router.post('/create-user', (req, res) => {
 	);
 });
 
+router.get('/api/create-user', function(req,res) {
+	if (req.body.name && req.body.bithdate) {
+		res.json({ message: 'signed-in', id: req.body.id });
+	}
+});
+
 router.get('/zodiac', function(req, res) {
 	mc.getAllZodiacs((signs) => {
 		// console.log(signs);
@@ -43,14 +49,14 @@ router.get('/zodiac', function(req, res) {
 	});
 });
 
-router.get('/zodiac/:id', function(req, res) {
+router.get('/zodiac/:zodiac', function(req, res) {
 	mc.getOneZodiac(
-		req.params.id,
+		req.params.zodiac,
 		(signsById) => {
 			console.log(signsById);
 			res.json(signsById);
 		}
-	);
+	);	
 });
 
 router.post('/create-zodiac', (req, res) => {
