@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<title>First Postgres Template</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="./public/css/home.css">
-  <title>Zodiaque</title>
 </head>
 <body>
-  <h1 class="header-title">Zodiaque</h1>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="./public/js/home.js"></script>
+	<div class="container">
+		<div class="jumbotron text-center">
+			<h1>Welcome to Zodiaque</h1>
+			<h2>Sign In or Sign Up to view your Horoscope</h2>
+		</div>
+		<div class="text-center center-block">
+			<div id="direct-buttons" class="btn-group" role="group" aria-label="Basic example">
+			  <a href="/sign-up" type="button" id="sign-up-button" class="btn btn-primary sign-buttons">Sign Up</a>
+			  <a href="/sign-in" type="button" id="sign-in-button" class="btn btn-info sign-buttons">Sign In</a>
+			</div>
+		</div>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="./public/js/home.js"></script>
 </body>
 </html>

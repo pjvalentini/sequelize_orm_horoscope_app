@@ -8,6 +8,15 @@ router.get('/', function(req,res) {
 	res.sendFile(path.join(__dirname, '../../client/public/html/home.html'));
 });
 
+router.get('/sign-up', function(req, res) {
+	res.sendfile(path.join(__dirname, '../../client/public/html/sign-up.html'));
+});
+
+router.get('/sign-in', function(req, res) {
+	res.sendfile(path.join(__dirname, '../../client/public/html/sign-in.html'));
+});
+
+
 router.get('/get-users', function(req, res) {
 	mc.getAllUsers((users) => {
 		console.log(users);

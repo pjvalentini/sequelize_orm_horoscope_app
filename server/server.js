@@ -15,6 +15,7 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
 app.use('/', routes);
+app.use(express.static('./client'));
 
 var PORT = process.env.PORT || 8000;
 
