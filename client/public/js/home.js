@@ -17,6 +17,7 @@ $(document).ready(function() {
 		var signInObj = {
 			name: $('#name-input').val(),
 			birthdate: $('#birthdate-input').val(),
+			zodiac: $('#zodiac-input').val(),
 		};
 		console.log(signInObj);
 
