@@ -4,6 +4,8 @@ var router = express.Router();
 var mc = require('./model-controller.js');
 var models = require('./../models');
 
+var html_creator = require('../helpers/html_creator.js');
+
 // route to homepage - working
 router.get('/', function(req,res) {
 	res.sendFile(path.join(__dirname, '../../client/public/html/home.html'));

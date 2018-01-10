@@ -28,10 +28,11 @@ $(document).ready(function() {
 			data: JSON.stringify(signInObj),
 			contentType: 'application/json',
 		}).then(function(res) {
-			if (res) {
-			} else {
-				window.location.href = "/home";
-			}
+			var button = $('<button>', {
+				text: "See Your Results",
+				href: "/zodiac",
+			});
+			$('#sign-up-form').append(button);
 		});
 	});
 });

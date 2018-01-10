@@ -33,7 +33,7 @@ module.exports = {
 	},
 
 	getOneZodiac: (zodiac , signs) => {
-		models.Horoscope.findAll({ where: { zodiac: zodiac } }).then((res) => {
+		models.Horoscope.findOne({ where: { zodiac: zodiac } }).then((res) => {
 			signs(res);
 		});
 	},
