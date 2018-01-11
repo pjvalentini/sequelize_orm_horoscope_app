@@ -1,4 +1,4 @@
-
+// passport/passport_jquery_sequelize/lesson/server/controllers/routes.js
 var models = require('./../models');
 
 module.exports = {
@@ -33,8 +33,18 @@ module.exports = {
 	},
 
 	getOneZodiac: (zodiac , signs) => {
-		models.Horoscope.findOne({ where: { zodiac: zodiac } }).then((res) => {
-			signs(res);
+		models.Horoscope.findOne({ where: { zodiac: zodiac } }).then((zodiac) => {
+
+			// OR LIKE THIS ?
+			// var zodiacObj = {};
+			// zodiacObj.zodiac = zodiac.zodiac;
+			// zodiacObj.todays_horoscope = zodiac.todays_horoscope;
+			// zodiacObj.description = zodiac.description;
+      //
+			// var data = {
+			// 	zodiac : zodiacObj,
+			// };
+			signs(zodiac);
 		});
 	},
 

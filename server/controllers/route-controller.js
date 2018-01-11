@@ -79,10 +79,20 @@ router.get('/zodiac', function(req, res) {
 // route to get zodaic by zodiac name - works
 router.get('/zodiac/:zodiac', function(req, res) {
 	mc.getOneZodiac(
+
+		// Like this?
+		// var zodiacObj = {};
+		// zodiacObj.zodiac = zodiac.zodiac;
+		// zodiacObj.todays_horoscope = zodiac.todays_horoscope;
+		// zodiacObj.description = zodiac.description;
+    //
+		// var data = {
+		// 	zodiac : zodiacObj,
+		// }
 		req.params.zodiac,
-		(signsById) => {
+		(signsBySign) => {
 			// console.log(signsById);
-			res.json(signsById);
+			res.json(signsBySign);
 		}
 	);
 });
