@@ -33,7 +33,6 @@ $(document).ready(function() {
 				text: "See Your Results",
 				href: "/zodiac/" + res.zodiac,
 				class: "btn btn-primary",
-				// do i need a conditional here?
 			});
 			$('#sign-up-form').append(aTag);
 		});
