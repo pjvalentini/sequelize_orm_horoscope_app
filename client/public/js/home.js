@@ -30,7 +30,8 @@ $(document).ready(function() {
 		}).then(function(res) {
 			var button = $('<button>', {
 				text: "See Your Results",
-				href: "/zodiac",
+				href: "/zodiac/:zodiac",
+				// do i need a conditional here?
 			});
 			$('#sign-up-form').append(button);
 		});
