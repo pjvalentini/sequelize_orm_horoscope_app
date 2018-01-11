@@ -40,8 +40,8 @@ module.exports = {
 			// zodiacObj.zodiac = zodiac.zodiac;
 			// zodiacObj.todays_horoscope = zodiac.todays_horoscope;
 			// zodiacObj.description = zodiac.description;
-      //
-			// var data = {
+      // zodiacObj.date_range = zodiac.date_range;
+ 			// var data = {
 			// 	zodiac : zodiacObj,
 			// };
 			signs(zodiac);

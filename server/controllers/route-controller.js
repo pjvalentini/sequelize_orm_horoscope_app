@@ -85,6 +85,7 @@ router.get('/zodiac/:zodiac', function(req, res) {
 		// zodiacObj.zodiac = zodiac.zodiac;
 		// zodiacObj.todays_horoscope = zodiac.todays_horoscope;
 		// zodiacObj.description = zodiac.description;
+		// zodiacObj.date_range = zodiac.date_range;
     //
 		// var data = {
 		// 	zodiac : zodiacObj,

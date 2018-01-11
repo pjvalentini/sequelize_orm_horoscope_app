@@ -1,14 +1,14 @@
 module.exports = (obj) => {
 	var str = "<html>";
-	str += "<head><title>" + obj.Horoscope.name + "'s Page</title>";
+	str += "<head><title>" + obj.Horoscopes.name + " Page</title>";
 	str += "<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>";
 	str += '<link rel="stylesheet" type="text/css" href="../../../public/css/user_home.css"></head>';
 	str += '<body><div class="container"><h1 id="hello">What\'s up ' + obj.Users.name + '</h1><br>';
 	str += '<div class="well">';
-	str += '<h3>Zodiac: ' + obj.Horoscope.zodiac + '</h3>';
-	str += '<h3>Todays Horoscope: ' + obj.Horoscope.todays_horoscope + '</h3>';
-  str += '<h3>Description: ' + obj.Horoscope.description + '</h3>';
-  str += '<h3>Date-Range: ' + obj.Horoscope.date_range + '</h3>';
+	str += '<h3>Zodiac: ' + obj.Horoscopes.zodiac + '</h3>';
+	str += '<h3>Todays Horoscope: ' + obj.Horoscopes.todays_horoscope + '</h3>';
+  str += '<h3>Description: ' + obj.Horoscopes.description + '</h3>';
+  str += '<h3>Date-Range: ' + obj.Horoscopes.date_range + '</h3>';
 	str += '</div>';
 	str += '<div class="btn-group" role="group" aria-label="Basic example">';
 	str += '<a id="home-button" href="/" type="button" class="btn btn-primary sign-buttons">';
