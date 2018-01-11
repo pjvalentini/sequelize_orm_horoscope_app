@@ -28,12 +28,14 @@ $(document).ready(function() {
 			data: JSON.stringify(signInObj),
 			contentType: 'application/json',
 		}).then(function(res) {
-			var button = $('<button>', {
+			console.log(res);
+			var aTag = $('<a>', {
 				text: "See Your Results",
-				href: "/zodiac/:zodiac",
+				href: "/zodiac/" + res.zodiac,
+				class: "btn btn-primary",
 				// do i need a conditional here?
 			});
-			$('#sign-up-form').append(button);
+			$('#sign-up-form').append(aTag);
 		});
 	});
 });
