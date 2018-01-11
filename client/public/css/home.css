@@ -1,3 +1,46 @@
-.header-title {
-  color: blue;
+
+
+.top-header {
+  color: #797979;
+  font-family: "Arial";
+  font-size: 60px;
+  margin-top: 0px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  padding-left: 45px;
+}
+
+img {
+  height: 50px;
+
+}
+
+.jumbotron {
+  margin-top: 30px;
+}
+
+.h1-tag {
+  color: #797979;
+  font-family: "Arial";
+}
+
+.h2-tag {
+  color: #909090;
+  font-family: "Arial";
+}
+
+label {
+  color: #797979;
+  font-family: "Arial";
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.btn-danger {
+  background-color: #dd7000;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: green;
 }

@@ -1,4 +1,3 @@
-// passport/passport_jquery_sequelize/lesson/server/controllers/routes.js
 var models = require('./../models');
 
 module.exports = {
@@ -9,12 +8,6 @@ module.exports = {
 			users(res);
 		});
 	},
-
-	// getOneUser: (id) => { // ask about this
-	// 	models.User.findAll({ where: { id: id } }).then((res) => {
-	// 		id(res);
-	// 	});
-	// },
 
 	createUser: (name, birthdate, zodiac, newUser) => {
 		models.User.create({
@@ -34,16 +27,6 @@ module.exports = {
 
 	getOneZodiac: (zodiac , signs) => {
 		models.Horoscope.findOne({ where: { zodiac: zodiac } }).then((zodiac) => {
-
-			// OR LIKE THIS ?
-			// var zodiacObj = {};
-			// zodiacObj.zodiac = zodiac.zodiac;
-			// zodiacObj.todays_horoscope = zodiac.todays_horoscope;
-			// zodiacObj.description = zodiac.description;
-      // zodiacObj.date_range = zodiac.date_range;
- 			// var data = {
-			// 	zodiac : zodiacObj,
-			// };
 			signs(zodiac);
 		});
 	},

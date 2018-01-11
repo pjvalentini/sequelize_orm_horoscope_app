@@ -6,22 +6,12 @@ var models = require('./../models');
 
 var html_creator = require('../helpers/html_creator.js');
 
-// route to homepage - working
+// route to homepage 
 router.get('/', function(req,res) {
 	res.sendFile(path.join(__dirname, '../../client/public/html/home.html'));
 });
 
-// route to sign-up page - working
-// router.get('/sign-up', function(req, res) {
-// 	res.sendfile(path.join(__dirname, '../../client/public/html/sign-up.html'));
-// });
-
-// route to sign-in page - working
-// router.get('/sign-in', function(req, res) {
-// 	res.sendfile(path.join(__dirname, '../../client/public/html/sign-in.html'));
-// });
-
-// this route lets you see all the users in the DB..- working
+// this route lets you see all the users in the DB
 router.get('/get-users', function(req, res) {
 	mc.getAllUsers((users) => {
 		// console.log(users);
@@ -29,7 +19,7 @@ router.get('/get-users', function(req, res) {
 	});
 });
 
-// route to create users - works with postman
+// route to create users
 router.post('/create-user', (req, res) => {
 	console.log(req.body);
 	mc.createUser(
@@ -42,33 +32,7 @@ router.post('/create-user', (req, res) => {
 		});
 });
 
-// OLD CODE _ NOT USING this now...
-// router.get('/api/sign-up', function(req,res) { // ask about this - BAD BAD!
-// 	if (req.id) {
-// 		mc.getOneUser(
-// 			req.params.id,
-// 			(usersByName) => {
-// 				console.log(usersByName);
-// 				res.json(usersByName);
-// 			}
-// 		);
-// 		res.json({ message: 'signed-in', id: req.body.id });
-// 	}
-// });
-
-// router.post('/api/sign-up', function(req, res) {
-// 	mc.createUser(
-// 		req.body.name,
-// 		req.body.birthdate,
-// 		req.body.zodiac,
-// 		(user) => {
-// 			console.log(user);
-// 			res.json(user);
-// 		}
-// 	);
-// });
-
-// route to get all zodiacs from DB - works
+// route to get all zodiacs from DB
 router.get('/zodiac', function(req, res) {
 	mc.getAllZodiacs((signs) => {
 		// console.log(signs);
@@ -76,7 +40,7 @@ router.get('/zodiac', function(req, res) {
 	});
 });
 
-// route to get zodaic by zodiac name - works
+// route to get zodaic by zodiac name
 router.get('/zodiac/:zodiac', function(req, res) {
 	mc.getOneZodiac(
 		req.params.zodiac,
