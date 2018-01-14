@@ -8,7 +8,7 @@ module.exports = {
 			users(res);
 		});
 	},
-
+// all of these function will be called in the route-controller.js file.
 	createUser: (name, birthdate, zodiac, newUser) => {
 		models.User.create({
 			name: name,

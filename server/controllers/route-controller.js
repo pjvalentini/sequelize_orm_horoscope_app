@@ -6,7 +6,7 @@ var models = require('./../models');
 
 var html_creator = require('../helpers/html_creator.js');
 
-// route to homepage 
+// route to homepage
 router.get('/', function(req,res) {
 	res.sendFile(path.join(__dirname, '../../client/public/html/home.html'));
 });
